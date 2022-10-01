@@ -7,7 +7,7 @@
         console.log("yes");
         var thatimg = document.createElement("img");
         //thatimg.src = document.getElementById("tempimg").src;
-        var id = link.slice(30, -4);
+        var id = link.split("/")[4].split(".")[0]
         thatimg.src = link;
         thatimg.alt = id;
         thatimg.style.width = "50%";
@@ -53,13 +53,13 @@
       <div>
         <label for="schools">School</label>
         <select name="schools" id="schools">
-          <option value="https://bnvv.amserp.in/ 1500 5000">Velloor</option>
+          <option value="https://bnvv.amserp.in/ 1900 5000">Velloor</option>
           <option value="https://bvmg.amserp.in/ 5500 9000">Girinagar</option>
           <option value="https://bav.amserp.in/ 1000 10000">Adarsha (Not)</option>
-          <option value="https://bvvt.amserp.in/ 2000 5000">Varuna</option>
-          <option value="https://bmv.amserp.in/ 1000 5000">Munshi</option>
-          <option value="https://bvme.amserp.in/ 1000 10000">Elamakkara</option>
-          <option value="https://bvmer.amserp.in/ 4000 8000">Eroor</option>
+          <option value="https://bvvt.amserp.in/ 2300 5000">Varuna</option>
+          <option value="https://bmv.amserp.in/ 1700 5000">Munshi</option>
+          <option value="https://bvme.amserp.in/ 1000 10000">Elamakkara (Not)</option>
+          <option value="https://bvmer.amserp.in/ 4500 8000">Eroor</option>
         </select>
       </div>
     </div>
