@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+    function change()
+    {
+        let adminum = document.getElementById("number").value
+        document.getElementById("image").src = "https://bnvv.amserp.in/banner/" + adminum + ".jpg" ;
+    }
+</script>
+<h1>HaHa found you</h1>
+<input id="number" onchange="change()"/>
+<button type="button"
+onclick="change()">
+Find</button>
+
+<img id="image"></img>
+
+</body>
+</html> 
+

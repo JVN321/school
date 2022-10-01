@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<meta http-equiv="Access-Control-Allow-Origin" content="*" />
+<html>
+  <body>
+    <script>
+      function yes(link) {
+        console.log("yes");
+        var thatimg = document.createElement("img");
+        //thatimg.src = document.getElementById("tempimg").src;
+        var id = link.slice(30, -4);
+        thatimg.src = link;
+        thatimg.alt = id;
+        thatimg.style.width = "50%";
+        thatimg.style.height = "50%";
+        var title = document.createElement("div");
+        title.innerHTML = id;
+        //thatimg.style.display = "none";
+
+        document.getElementById("images").appendChild(thatimg);
+        document.getElementById("images").appendChild(title);
+      }
+      function change() {
+        for (i = 2169; i < 2170; i++) {
+          //var egg = 2169;
+          var link = "https://bnvv.amserp.in/" + "banner/" + i + ".jpg";
+          var newimg = document.createElement("img");
+          newimg.src = link;
+          newimg.style.display = "none";
+          newimg.id = "tempimg";
+          newimg.setAttribute("onload", "yes(src)");
+          document.body.appendChild(newimg);
+          document.body.removeChild(newimg);
+        }
+      }
+    </script>
+    <h1>HaHa found you</h1>
+    <div>
+      Range <input id="range" />
+      <div>
+        <label for="schools">Choose a dog name:</label>
+        <select name="schools" id="schools">
+          <option value="https://bvmg.amserp.in/ 1000 10000">Girinagar</option>
+          <option value="https://bav.amserp.in/ 1000 10000">Adarsha</option>
+          <option value="https://bvvt.amserp.in/ 1000 10000">Varuna</option>
+          <option value="https://bnvv.amserp.in/ 1000 10000">Velloor</option>
+          <option value="https://bmv.amserp.in/ 1000 10000">Munshi</option>
+          <option value="https://bvme.amserp.in/ 1000 10000">Elamakkara</option>
+          <option value="https://bvmer.amserp.in/ 1000 10000">Eroor</option>
+        </select>
+      </div>
+    </div>
+    <button type="button" onclick="change()">Find</button>
+    <div id="images"></div>
+  </body>
+</html>
